@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>🥳Happy birthday</title>
+    <style>
+      div {
+        box-shadow: rgba(37, 39, 89, 0.08) 0px 8px 8px 0;
+        background-color: #fff;
+        border-radius: 10px;
+        color: #355c7d;
+        width: 50%;
+        padding: 30px;
+        margin: 30px auto;
+        font-family: "Cerebri Sans", Helvetica, Arial, sans-serif;
+      }
+      body {
+        background-image: linear-gradient(
+          91.7deg,
+          rgb(252, 190, 224) 16.8%,
+          rgb(212, 254, 218) 103.6%
+        );
+      }
+      h1 {
+        text-align: center;
+        color: #dd7777;
+        font-weight: bold;
+      }
+      h2 {
+        text-align: center;
+
+        border: 2px solid #dd7777;
+        line-height: 2;
+        padding: 10px;
+        font-size: 25px;
+        border-radius: 10px;
+      }
+      img {
+        display: block;
+        margin: 0 auto;
+        max-width: 50%;
+        padding: 20px;
+        border-radius: 30px;
+      }
+      p {
+        line-height: 1.3;
+        font-size: 14px;
+      }
+      button {
+        display: block;
+        margin: 0 auto;
+        background-color: #dd7777;
+        color: white;
+        font-size: 22px;
+        padding: 15px 25px;
+        border: none;
+        border-radius: 15px;
+        box-shadow: 15px 15px 15px (rgba(0, 0, 0, 0.8));
+        transition: all 200ms ease-in-out;
+      }
+      button:hover {
+        opacity: 0.8;
+        cursor: pointer;
+      }
+      .container {
+        max-width: 500px;
+        margin: 0 auto;
+        padding: 30px 55px;
+      }
+
+      .wish-list {
+        display: block;
+        margin-top: 20px;
+        margin-bottom: 25px;
+        text-decoration: none;
+        color: #dd7777;
+      }
+      .wish-list:hover {
+        text-decoration: underline;
+      }
+      .footer {
+        text-align: center;
+        padding: 20px;
+        color: black;
+        font-size: 14px;
+      }
+      .profile {
+        text-decoration: none;
+      }
+      .profile:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>🥳 Happy birthday Mía 🥳</h1>
+      <h2>Mía is turning 2, Let's celebrate!</h2>
+      <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/074/636/original/IMG_3044.jpg?1680377890"
+        alt="La perrita Mía"
+      />
+      <hr />
+      <p>
+        <strong>
+          Meet our lovable furry friend who is about to turn two!</strong
+        >
+        Mía is a dog who enjoys the fresh mountain air, playing and making new
+        furry friends, and running around until her heart's content. She is
+        quite the foodie and can never say no to lots of delicious treats. Her
+        favorite toy is a Christmas reindeer, which she cuddles with all the
+        time.
+        <span>
+          Let's all join in to wish her a <em> happy 2nd birthday </em> and many
+          more years of adventure and fun!
+        </span>
+        <br />
+      </p>
+      <a
+        href="https://www.zooplus.es/shop/tienda_perros/snacks_perros"
+        target="_blank"
+        class="wish-list"
+        >Here you can find her Wish List</a
+      >
+      <button class="give-grettings">Give Mía a gretting message</button>
+      <p class="footer">
+        This page was built by
+        <a
+          href="https://www.linkedin.com/in/jennifer-cordero/"
+          target="_blank"
+          class="profile"
+          >Jennifer Cordero</a
+        >
+        👩🏽‍💻
+      </p>
+    </div>
+
+    <script>
+      function updateHeader2(newHeader) {
+        let header = document.querySelector("h2");
+        header.innerHTML = newHeader;
+      }
+      function give() {
+        let congratulate = prompt("Send Mía a Happy Bitrhday message 🐶");
+        if (congratulate.length > 0) {
+          updateHeader2(congratulate);
+          window.scrollTo(0, 0);
+        } else {
+          alert("We are sorry you don't want to send a message to Mía 😢");
+        }
+      }
+
+      let giveGrettigns = document.querySelector(".give-grettings");
+      giveGrettigns.addEventListener("click", give);
+      //let giveGrettigns = document.querySelector(".give-grettings");
+      //giveGrettigns.addEventListener("click", scrollToTop);
+    </script>
+  </body>
+</html>
